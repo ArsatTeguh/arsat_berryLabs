@@ -35,31 +35,31 @@ function CardPricing({ item, index }: Props) {
         <VectorIcon />
       </div>
       <div
-        className={`flex flex-col gap-3 lg:py-4 py-8 rounded-b-md ${
+        className={` flex flex-col gap-3 lg:py-4 py-8 rounded-b-md ${
           index % 2 === 0 ? 'bg-secondary' : 'bg-white'
         }`}
       >
-        <div className="flex items-center gap-1 justify-center">
+        <div className="flex items-center gap-1  justify-center h-8 ">
           <p>{item?.Generations}</p>
           <VectorIcon />
         </div>
-        <p>{item?.perUpload} </p>
-        <div className="flex items-center gap-1 justify-center">
+        <p className="h-8 ">{item?.perUpload} </p>
+        <div className="flex items-center gap-1 justify-center h-8 ">
           <p>{item?.perFile}</p>
           <VectorIcon />
         </div>
-        <div className="flex items-center gap-1 justify-center">
+        <div className="flex items-center gap-1 justify-center h-8 ">
           <p>{item?.size}</p>
           <VectorIcon />
         </div>
         {Array.from({ length: 3 }).map(() => (
-          <p key={index}>
+          <div key={index} className=" h-8 flex justify-center items-center">
             <svg
               tabIndex={index}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="green"
-              className="w-5 h-5 mx-auto"
+              className="w-4 h-4 mx-auto"
             >
               <path
                 fillRule="evenodd"
@@ -67,7 +67,7 @@ function CardPricing({ item, index }: Props) {
                 clipRule="evenodd"
               />
             </svg>
-          </p>
+          </div>
         ))}
 
         <Button
