@@ -4,10 +4,10 @@ import BerryLabsSvg from '../ui/berryLabs_svg';
 
 function Navbar() {
   return (
-    <div className="navbar bg-white py-4 px-6 ">
+    <div className="navbar bg-white py-4 lg:px-6 ">
       <div className="navbar-start">
         <div className="dropdown">
-          {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */ }
+          {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ function Navbar() {
               />
             </svg>
           </div>
-          <ul className="font-medium menu menu-sm bg-zinc-100 dropdown-content mt-3 z-[1] p-2 shadow  rounded-md w-52">
+          <ul className="font-medium menu text-zinc-800 menu-sm bg-zinc-100 dropdown-content mt-3 z-[1] p-2 shadow  rounded-md w-52">
             <li>
               <p>Link 1</p>
             </li>
@@ -44,7 +44,9 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <BerryLabsSvg />
+        <div className="hidden lg:block">
+          <BerryLabsSvg />
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu gap-8 menu-horizontal px-1 font-medium">

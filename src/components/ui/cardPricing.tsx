@@ -20,10 +20,10 @@ function CardPricing({ item, index }: Props) {
           index % 2 === 0 ? 'bg-secondary' : 'bg-white'
         }`}
       >
-        <p className="text-xl">{item?.status}</p>
+        <p className="lg:text-xl text-2xl">{item?.status}</p>
         <p className=" text-zinc-500">{item?.priority}</p>
-        <p className="text-3xl font-semibold text-zinc-800">
-          IDR {item?.price},000
+        <p className="lg:text-3xl text-4xl font-semibold text-zinc-800">
+          IDR {item?.price}{item?.price !== 0 && ',000'}
         </p>
       </div>
       <div
@@ -53,13 +53,13 @@ function CardPricing({ item, index }: Props) {
           <VectorIcon />
         </div>
         {Array.from({ length: 3 }).map(() => (
-          <div key={index} className=" h-8 flex justify-center items-center">
+          <div key={index} className=" lg:flex h-8 hidden  justify-center items-center">
             <svg
               tabIndex={index}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="green"
-              className="w-4 h-4 mx-auto"
+              className="lg:w-4 lg:h-4 w-8 h-8 mx-auto"
             >
               <path
                 fillRule="evenodd"

@@ -17,7 +17,7 @@ function Pricing() {
         <div className="h-full hidden lg:block">
           <CoreFeature />
         </div>
-        <div className="grid lg:grid-cols-4 grid-cols-1 gap-x-0 gap-y-12">
+        <div className="grid lg:grid-cols-4 grid-cols-1 px-4 gap-x-0 gap-y-12">
           {dataPricing?.map((item, index: number) => (
             <div key={item.price}>
               <CardPricing item={item} index={index} />

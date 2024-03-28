@@ -5,7 +5,7 @@ import BerryLabsSvg from '../ui/berryLabs_svg';
 
 function Footer() {
   return (
-    <footer className="flex  justify-between text-zinc-800 flex-col gap-6 lg:flex-row text-base lg:text-sm p-10 bg-[#F9FAFB] ">
+    <footer className="flex  justify-between text-zinc-800 flex-wrap gap-6 lg:flex-row text-base lg:text-sm lg:px-10 lg:py-10 px-5 bg-[#F9FAFB] ">
       <div className="lg:max-w-[50%] w-full">
         <BerryLabsSvg />
         <p className="pt-4 leading-6 ">
